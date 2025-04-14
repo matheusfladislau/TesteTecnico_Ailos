@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjInstFinanceira", "prjInstFinanceira\prjInstFinanceira.csproj", "{F680DF8C-9573-4BDF-A909-E3E86B56AABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjInstFinanceira.Tests", "prjInstFinanceira.Tests\prjInstFinanceira.Tests.csproj", "{CEBA818A-0392-4858-8602-28D55AECB8E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F680DF8C-9573-4BDF-A909-E3E86B56AABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F680DF8C-9573-4BDF-A909-E3E86B56AABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F680DF8C-9573-4BDF-A909-E3E86B56AABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F680DF8C-9573-4BDF-A909-E3E86B56AABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBA818A-0392-4858-8602-28D55AECB8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBA818A-0392-4858-8602-28D55AECB8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBA818A-0392-4858-8602-28D55AECB8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBA818A-0392-4858-8602-28D55AECB8E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
