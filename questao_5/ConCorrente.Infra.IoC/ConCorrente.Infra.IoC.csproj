@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ContaCorrente.Application\ConCorrente.Application.csproj" />
-    <ProjectReference Include="..\ContaCorrente.Domain\ConCorrente.Domain.csproj" />
-    <ProjectReference Include="..\ContaCorrente.Infra.Data\ConCorrente.Infra.Data.csproj" />
+    <ProjectReference Include="..\ConCorrente.Application\ConCorrente.Application.csproj" />
+    <ProjectReference Include="..\ConCorrente.Domain\ConCorrente.Domain.csproj" />
+    <ProjectReference Include="..\ConCorrente.Infra.Data\ConCorrente.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>
