@@ -22,6 +22,7 @@ questao_5/
 ├── ConCorrente.Domain/          # Entidades e regras de negócio (núcleo do domínio)
 ├── ConCorrente.Infra.Data/      # Persistência de dados com Dapper e SQLite
 ├── ConCorrente.Infra.IoC/       # Injeção de dependência e configuração de serviços
+├── ConCorrente.Tests/           # Testes unitários da aplicação
 ├── ConCorrente.WebAPI/          # API REST para exposição das funcionalidades
 ├── prjMovimentacaoConta/        # Projeto auxiliar para movimentações (escrita)
 └── prjSaldoConta/               # Projeto auxiliar para consulta de saldo (leitura)
