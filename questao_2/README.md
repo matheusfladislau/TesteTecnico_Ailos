@@ -5,13 +5,11 @@ Projeto desenvolvido com .NET 8 com o objetivo de calcular a quantidade de gols 
 ## Estrutura do Projeto:
 
 ``` 
-questao_5/
+questao_2/
 │
 └── prjGolsAno
 	├── Models/		# Modelos de domínio
         └── Services/		# Serviço para utilização da API
-
-
 ```
 ## Instalação
 
@@ -29,6 +27,7 @@ cd TesteTecnico_Ailos
 git sparse-checkout init --cone
 git sparse-checkout set questao_2/
 git checkout main
+cd questao_2/
 ```
 
 - Gere as .dlls de cada projeto:
