@@ -4,5 +4,5 @@ namespace ConCorrenteDomain.Interfaces;
 public interface IMovimentoRepository {
     Task<Movimento> GetMovimentoAsync(string id);
 
-    Task AddAsync(Movimento movimento);
+    Task<string> AddAsync(Movimento movimento);
 }

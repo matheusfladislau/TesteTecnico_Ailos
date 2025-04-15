@@ -1,7 +1,9 @@
-﻿using ConCorrenteDomain.Validation;
+﻿using ConCorrente.Domain.Exceptions;
+using ConCorrenteDomain.Validation;
 
 namespace ConCorrenteDomain.Entities; 
 public sealed class Movimento {
+    public Movimento() { }
     public Movimento(string id, DateTime dataMovimento, string tipoMovimento, decimal valor, string idContaCorrente) {
         ValidateTipoMovimento(tipoMovimento);
         ValidateValor(valor);
@@ -34,12 +36,12 @@ public sealed class Movimento {
     private void ValidateValor(decimal valor) {
         MovimentoEntityValidation.When(valor <= 0, 
             "Valor deve ser positivo.", 
-            "INVALID_VALUE");
+            ErrorType.INVALID_VALUE);
     }
 
     private void ValidateTipoMovimento(string tipoMovimento) {
-        MovimentoEntityValidation.When(tipoMovimento != "C" && tipoMovimento != "D"
-            , "Tipo inválido."
-            , "INVALID_TYPE");
+        MovimentoEntityValidation.When(tipoMovimento != "C" && tipoMovimento != "D" , 
+            "Tipo inválido.", 
+            ErrorType.INVALID_TYPE);
     }
 }

@@ -2,9 +2,7 @@
 
 namespace ConCorrenteDomain.Entities; 
 public class ContaCorrente {
-    public ContaCorrente() {
-        
-    }
+    public ContaCorrente() { }
     public string IdContaCorrente { get; private set; }
     public int Numero { get; private set; }
     public string Nome { get; private set; }

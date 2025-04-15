@@ -3,5 +3,5 @@
 namespace ConCorrenteDomain.Interfaces;
 public interface IContaCorrenteRepository {
     Task<ContaCorrente> GetById(string id);
-    Task<IEnumerable<ContaCorrente>> GetContaCorrentes();
+    Task<decimal> GetSaldoContaCorrenteAsync(string idContaCorrente);
 }

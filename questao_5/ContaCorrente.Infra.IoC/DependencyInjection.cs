@@ -1,4 +1,5 @@
-﻿using ConCorrente.Domain.Interfaces;
+﻿using ConCorrente.Application.Movimentos.Commands;
+using ConCorrente.Domain.Interfaces;
 using ConCorrente.Infra.Data;
 using ConCorrente.Infra.Data.Interfaces;
 using ConCorrente.Infra.Data.Repositories;
@@ -17,6 +18,8 @@ public static class DependencyInjection {
         services.AddScoped<IMovimentoRepository, MovimentoRepository>();
         services.AddScoped<IIdempotenciaRepository, IdempotenciaRepository>();
 
+        services.AddMediatR(cfg =>
+            cfg.RegisterServicesFromAssembly(typeof(MovimentoCreateCommand).Assembly));
         return services;
     }
 }

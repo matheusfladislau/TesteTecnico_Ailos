@@ -3,6 +3,7 @@ using ConCorrenteDomain.Validation;
 
 namespace ConCorrente.Domain.Entities; 
 public sealed class Idempotencia {
+    public Idempotencia() { }
     public Idempotencia(string id, string requisicao, string resultado) {
         ValidateRequisicao(requisicao);
         ValidateResultado(resultado);
@@ -11,6 +12,7 @@ public sealed class Idempotencia {
         this.Requisicao = requisicao;
         this.Resultado = resultado;
     }
+
     public string Chave_Idempotencia { get; private set; }
     public string Requisicao { get; private set; }
     public string Resultado { get; private set; }

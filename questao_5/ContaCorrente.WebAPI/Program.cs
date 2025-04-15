@@ -1,4 +1,6 @@
 using ConCorrente.Infra.IoC;
+using ConCorrente.WebAPI.Middlewares;
+using Microsoft.AspNetCore.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +19,8 @@ if (app.Environment.IsDevelopment()) {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 

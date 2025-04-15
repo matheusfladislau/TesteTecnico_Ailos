@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.Infra.IoC", "Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.WebAPI", "ContaCorrente.WebAPI\ConCorrente.WebAPI.csproj", "{733F2653-5D44-42A0-B52B-75EA9020FEEB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.Tests", "ConCorrente.Tests\ConCorrente.Tests.csproj", "{B8EAC6C3-7D96-41BE-8037-1CB68E8CD69C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{733F2653-5D44-42A0-B52B-75EA9020FEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{733F2653-5D44-42A0-B52B-75EA9020FEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{733F2653-5D44-42A0-B52B-75EA9020FEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8EAC6C3-7D96-41BE-8037-1CB68E8CD69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8EAC6C3-7D96-41BE-8037-1CB68E8CD69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8EAC6C3-7D96-41BE-8037-1CB68E8CD69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8EAC6C3-7D96-41BE-8037-1CB68E8CD69C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

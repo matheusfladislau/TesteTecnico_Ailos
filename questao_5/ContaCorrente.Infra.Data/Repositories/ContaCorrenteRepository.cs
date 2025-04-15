@@ -2,7 +2,6 @@
 using ConCorrenteDomain.Entities;
 using ConCorrenteDomain.Interfaces;
 using Dapper;
-using System.Data;
 
 namespace ConCorrente.Infra.Data.Repositories;
 public class ContaCorrenteRepository : IContaCorrenteRepository {
@@ -19,11 +18,24 @@ public class ContaCorrenteRepository : IContaCorrenteRepository {
         }
     }
 
-    public async Task<IEnumerable<ContaCorrente>> GetContaCorrentes() {
-        const string sql = "SELECT * FROM contacorrente";
+    public async Task<decimal> GetSaldoContaCorrenteAsync(string id) {
+        decimal? qtCredito = 0;
+        decimal? qtDebito = 0;
+
+        const string sqlCredito = "SELECT SUM(valor) FROM movimento " +
+                                  "WHERE idcontacorrente = @id " +
+                                  "AND tipomovimento = 'C' ";
+
+        const string sqlDebito = "SELECT SUM(valor) FROM movimento " +
+                                 "WHERE idcontacorrente = @id " +
+                                 "AND tipomovimento = 'D' ";
 
         using (var connection = _connectionFactory.CreateConnection()) {
-            return await connection.QueryAsync<ContaCorrente>(sql);
+            qtCredito = await connection.QueryFirstOrDefaultAsync<decimal?>(sqlCredito, new { id }) ?? 0;
+            qtDebito = await connection.QueryFirstOrDefaultAsync<decimal?>(sqlDebito, new { id }) ?? 0;
         }
+
+        var resultado = qtCredito - qtDebito;
+        return (decimal)resultado;
     }
 }

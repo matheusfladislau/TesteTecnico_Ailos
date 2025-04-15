@@ -11,19 +11,22 @@ public class MovimentoRepository : IMovimentoRepository {
         this._connectionFactory = connectionFactory;
     }
 
-    public async Task AddAsync(Movimento movimento) {
+    public async Task<string> AddAsync(Movimento movimento) {
+        var id = Guid.NewGuid();
+
         var sql = @"INSERT INTO movimento (idmovimento, idcontacorrente, datamovimento, tipomovimento, valor)
                     VALUES (@idmovimento, @idcontacorrente, @datamovimento, @tipomovimento, @valor)";
 
         using (var connection = _connectionFactory.CreateConnection()) {
             await connection.ExecuteAsync(sql, new {
-                idmovimento = movimento.IdMovimento.ToString(),
-                idcontacorrente = movimento.IdContaCorrente.ToString(),
+                idmovimento = id.ToString(),
+                idcontacorrente = movimento.IdContaCorrente,
                 datamovimento = movimento.DataMovimento.ToString("dd/mm/YYYY"),
                 tipomovimento = movimento.TipoMovimento,
                 valor = movimento.Valor
             });
         }
+        return id.ToString();
     }
 
     public async Task<Movimento> GetMovimentoAsync(string id) {
