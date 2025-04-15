@@ -1,0 +1,2 @@
+mudei os tipos de text pra Guid
+ajustei o text da data pra datetime (?) não sei se fez mt sentido
