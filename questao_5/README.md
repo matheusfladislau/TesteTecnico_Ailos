@@ -10,6 +10,8 @@ Projeto desenvolvido com .NET 8, seguindo os princípios da Arquitetura Limpa e 
 - Swagger – para documentação e teste interativo da API REST
 - Dapper – utilizado como ORM leve e performático
 - SQLite – banco de dados relacional leve e embutido
+- NSubstitute – para desenvolvimento de mocks nos testes unitários
+
 
 ## Estrutura do Projeto:
 
@@ -52,4 +54,10 @@ dotnet build
 dotnet run --project ConCorrente.WebAPI
 dotnet run --project prjMovimentacaoConta
 dotnet run --project prjSaldoConta
+```
+
+- Para rodar os testes:
+```bash
+cd ConCorrente.Tests
+dotnet test
 ```

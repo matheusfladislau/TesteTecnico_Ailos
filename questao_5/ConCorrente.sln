@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.Application", "ConCorrente.Application\ConCorrente.Application.csproj", "{7EE45C21-B4C5-47DA-93EE-43437B189C75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConCorrente.Application", "ConCorrente.Application\ConCorrente.Application.csproj", "{7EE45C21-B4C5-47DA-93EE-43437B189C75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.Domain", "ConCorrente.Domain\ConCorrente.Domain.csproj", "{4321C852-AAAE-402F-A8D9-58D55BFBB9EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConCorrente.Domain", "ConCorrente.Domain\ConCorrente.Domain.csproj", "{4321C852-AAAE-402F-A8D9-58D55BFBB9EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.Infra.Data", "ConCorrente.Infra.Data\ConCorrente.Infra.Data.csproj", "{7C706A73-AD28-46CE-92AC-30B8AEEF1001}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConCorrente.Infra.Data", "ConCorrente.Infra.Data\ConCorrente.Infra.Data.csproj", "{7C706A73-AD28-46CE-92AC-30B8AEEF1001}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.Infra.IoC", "ConCorrente.Infra.IoC\ConCorrente.Infra.IoC.csproj", "{7A12471C-8F88-4258-99F7-9F69727E3016}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConCorrente.Infra.IoC", "ConCorrente.Infra.IoC\ConCorrente.Infra.IoC.csproj", "{7A12471C-8F88-4258-99F7-9F69727E3016}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.WebAPI", "ConCorrente.WebAPI\ConCorrente.WebAPI.csproj", "{733F2653-5D44-42A0-B52B-75EA9020FEEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConCorrente.WebAPI", "ConCorrente.WebAPI\ConCorrente.WebAPI.csproj", "{733F2653-5D44-42A0-B52B-75EA9020FEEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjMovimentacaoConta", "prjMovimentacaoConta\prjMovimentacaoConta.csproj", "{F211E576-C408-4F26-949F-B33A970DE7AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prjMovimentacaoConta", "prjMovimentacaoConta\prjMovimentacaoConta.csproj", "{F211E576-C408-4F26-949F-B33A970DE7AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjSaldoConta", "prjSaldoConta\prjSaldoConta.csproj", "{794D361C-836D-4BF9-ACED-E1A6820E7FBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "prjSaldoConta", "prjSaldoConta\prjSaldoConta.csproj", "{794D361C-836D-4BF9-ACED-E1A6820E7FBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConCorrente.Tests", "ConCorrente.Tests\ConCorrente.Tests.csproj", "{09C48411-081F-4432-9555-F942AA33460D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,8 +53,15 @@ Global
 		{794D361C-836D-4BF9-ACED-E1A6820E7FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794D361C-836D-4BF9-ACED-E1A6820E7FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794D361C-836D-4BF9-ACED-E1A6820E7FBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C48411-081F-4432-9555-F942AA33460D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C48411-081F-4432-9555-F942AA33460D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C48411-081F-4432-9555-F942AA33460D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C48411-081F-4432-9555-F942AA33460D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {763AEC77-67E1-4EC9-8D72-9C1C6E53B593}
 	EndGlobalSection
 EndGlobal
