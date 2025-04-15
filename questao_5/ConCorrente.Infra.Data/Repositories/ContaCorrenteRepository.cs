@@ -18,6 +18,14 @@ public class ContaCorrenteRepository : IContaCorrenteRepository {
         }
     }
 
+    public async Task<IEnumerable<ContaCorrente>> GetContasCorrentes() {
+        const string sql = "SELECT * FROM contacorrente";
+
+        using (var connection = _connectionFactory.CreateConnection()) {
+            return await connection.QueryAsync<ContaCorrente>(sql, null);
+        }
+    }
+
     public async Task<decimal> GetSaldoContaCorrenteAsync(string id) {
         decimal? qtCredito = 0;
         decimal? qtDebito = 0;

@@ -9,7 +9,7 @@ public sealed class SaldoService {
     }
 
     public async Task<SaldoResponse> GetSaldoContaCorrenteAsync(SaldoRequest saldoRequest) {
-        var url = $"https://localhost:7259/api/Saldos/GetSaldoContaCorrente/{saldoRequest.IdContaCorrente}";
+        var url = $"https://localhost:7259/api/ContasCorrentes/GetSaldoContaCorrente/{saldoRequest.IdContaCorrente}";
         var response = await _httpClient.GetAsync(url);
 
         var contentResponse = await response.Content.ReadAsStringAsync();
