@@ -44,3 +44,9 @@ dotnet build
 ```bash
 dotnet run --project prjInstFinanceira
 ```
+
+- Para rodar os testes:
+```bash
+cd prjInstFinanceira.Tests
+dotnet test
+```
