@@ -3,7 +3,6 @@ using System;
 namespace prjMovimentacaoConta.Models; 
 public sealed class MovimentoClient {
     private readonly MovimentoService _movimentoService;
-    private const int MaxRetries = 5;
     private const int RetryDelayMilliseconds = 2000;
 
     public MovimentoClient() {
@@ -13,7 +12,7 @@ public sealed class MovimentoClient {
     public async Task SendMovimentoRequest(MovimentoRequest movimento) {
         int attempt = 0;
 
-        while (attempt < MaxRetries) {
+        while (true) {
             try {
                 var response = await _movimentoService.SendMovimentoAsync(movimento);
                 if (response.StatusCode == System.Net.HttpStatusCode.OK) {
@@ -24,12 +23,7 @@ public sealed class MovimentoClient {
                 break;
             } catch (Exception ex) {
                 attempt++;
-                Console.WriteLine($"Falha ao tentar enviar a requisição. Tentativa {attempt} de {MaxRetries}. Erro: {ex.GetBaseException().Message}");
-
-                if (attempt >= MaxRetries) {
-                    Console.WriteLine("Número máximo de tentativas atingido. Não foi possível enviar a requisição.");
-                    break;
-                }
+                Console.WriteLine($"Falha ao tentar enviar a requisição. Tentativa {attempt}. Erro: {ex.GetBaseException().Message}");
 
                 Console.WriteLine($"Tentando novamente em {RetryDelayMilliseconds / 1000} segundos...");
                 await Task.Delay(RetryDelayMilliseconds);
